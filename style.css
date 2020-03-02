@@ -26,6 +26,7 @@
 body{
 	margin: 0;
 	background-color: #000;
+	min-width: 600px;
 }
 #top{
 	width: 100%;
@@ -209,7 +210,7 @@ body{
 	position: relative;
 	background-color: #222;
 	height: 800px;
-	width: 550px;
+	width: 550px; 
 	display: inline-block;
 }
 .box3-card-img{
@@ -332,6 +333,11 @@ body{
 	text-align: center;
 	padding-bottom: 100px;
 	padding-top: 100px;
+}
+.box4-more table{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	background-color: rgba(72,56,32,0.2);
 }
 #box4-more{
 	position: relative;
@@ -474,6 +480,10 @@ body{
 	z-index: 1;
 	opacity: 0.4;
 }
-@media(max-width: ){
-
+@media(max-width: 800px){
+	#box4-more{
+		padding-left: 5%;
+		padding-right: 5%;
+		width: 90%;
+	}
 }
