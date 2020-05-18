@@ -155,7 +155,6 @@ body{
 		top: 100%;
 		left: 0;
 		background-color: #000;
-		opacity: 0.1;
 		transform: translateY(-50%) scaleY(0);
 		transition-duration: 200ms;
 		transition-property: transform;
