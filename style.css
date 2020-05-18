@@ -1,3 +1,9 @@
+
+body{
+	margin: 0;
+	background-color: #000;
+	padding-top: 60px;
+}
 ::-webkit-scrollbar-track{
     border-width:0;
     background-color: #111;
@@ -15,34 +21,8 @@
     border-color: #555;
     background-color: #333;
 }
-@font-face{
-	font-family: font1;
-	src: url(145.ttf);
-}
-@font-face{
-	font-family: font2;
-	src: url(178.ttf);
-}
-body{
-	margin: 0;
-	background-color: #000;
-	min-width: 600px;
-}
-#top{
-	width: 100%;
-	background-color: #000;
-	color: #fff;
-	text-align: right;
-}
-#top a{
-	color: #fff;
-	text-decoration: none;
-}
-#top a:hover{
-	text-decoration: underline;	
-}
 #top-menu{
-	position: sticky;
+	position: fixed;
 	height: 60px;
 	width: 100%;
 	top: 0;
@@ -54,7 +34,7 @@ body{
 	width: 100%;
 }
 #ad-box{
-	height: 120px;
+	height: 270px;
 	overflow: hidden;
 }
 #ad-box-img{
@@ -123,8 +103,6 @@ body{
 	background-color: #974;
 	transition-duration: 200ms;
 	transition-property: padding, margin;
-
-    
 }
 .simple-solid-btn a{
 	text-decoration: none;
@@ -159,6 +137,7 @@ body{
 	left: 75%;
 	transform: translate(-50%,-50%);
 	width: 500px;
+	max-width: 45%;
 	color: #fff;
 	font-size: 30px;
 }
@@ -171,51 +150,57 @@ body{
 .box1-title-btn{
 	display: inline-block;
 }
-.tmb-menu{
-	position: absolute;
-	top: 100%;
-	left: 0;
-	background-color: #000;
-	transform: translateY(-50%) scaleY(0);
-	transition-duration: 200ms;
-	transition-property: transform;
-}
-#tmb1-menu .tmb-menu-btn{
-	width: 200px;
-}
-#tmb1-menu .tmb-menu-btn{
-	width: 150px;
-}
-#tmb1-menu .tmb-menu-btn{
-	width: 100px;
-}
-.top-menu-btn:hover .tmb-menu{
-	transform: translateY(0) scaleY(1);
-}
-.tmb-menu a{
-	text-decoration: none;
-}
-.tmb-menu-btn{
-	display: inline-block;
-}
+	.tmb-menu{
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: #000;
+		opacity: 0.1;
+		transform: translateY(-50%) scaleY(0);
+		transition-duration: 200ms;
+		transition-property: transform;
+	}
+	#tmb1-menu .tmb-menu-btn{
+		width: 200px;
+	}
+	#tmb1-menu .tmb-menu-btn{
+		width: 150px;
+	}
+	#tmb1-menu .tmb-menu-btn{
+		width: 100px;
+	}
+	.top-menu-btn:hover .tmb-menu{
+		transform: translateY(0) scaleY(1);
+	}
+	.tmb-menu a{
+		text-decoration: none;
+	}
+	.tmb-menu-btn{
+		display: inline-block;
+	}
 #box3{
+	height: 1000px;
 	background-color: #333;
-	text-align: center;
-	padding-bottom: 25px;
-	padding-top: 25px;
+}
+#box3-cards{
+	height: 900px;
+	width: 1106px;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 .box3-card{
-	margin: 25px;
 	position: relative;
 	background-color: #222;
-	height: 800px;
-	width: 550px; 
+	height: 100%;
+	width: 550px;
 	display: inline-block;
 }
 .box3-card-img{
 	position: absolute;
 	width: 100%;
-	left: 0;
 }
 .box3-card-gradient{
 	position: absolute;
@@ -243,15 +228,22 @@ body{
 	font-size: 50px;
 }
 #box5{
-	background-color: #111;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	height: 1000px;
+	background-color:#333;
+	padding-top: 100px;
+	padding-bottom: 100px;
 	text-align: center;
 }
 #box5-text{
 	color: #fff;
 	font-size: 50px;
 }
+#box5-cards{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
 .box5-card{
 	height: 570px;
 	width: 300px;
@@ -267,7 +259,8 @@ body{
 }
 .box5-card:hover{
 	transform: translateY(-10px);
-	box-shadow: 0 15px 15px #000; 
+	box-shadow: 0 15px 15px #000;
+
 }
 .box5-card-img{
 	position: absolute;
@@ -291,10 +284,8 @@ body{
 #footer a:hover{
 	text-decoration: underline;
 }
-.box5-card-text b{
-	color: #9c6767;
-	font-family: fantasy;
-
+.box5-card b{
+	color: #ff0;
 }
 .box5-card-text{
 	position: absolute;
@@ -314,22 +305,13 @@ body{
 	top: 125px;
 }
 .box5-card-text .second{
-	font-size: 16px;
-	font-family: font2;
-}
-.box5-card-text .big{
 	font-size: 20px;
-	font-family: font1;
 }
 #box4{
 	text-align: center;
 	padding-bottom: 100px;
 	padding-top: 100px;
-}
-.box4-more table{
-	margin-top: 30px;
-	margin-bottom: 30px;
-	background-color: rgba(72,56,32,0.2);
+	background-color: #141414;
 }
 #box4-more{
 	position: relative;
@@ -337,15 +319,14 @@ body{
 	color: #a6b3a9;
 	text-align: left;
 	vertical-align: top;
+	width: 800px;
 	font-size: 25px;
-	margin: 50px;
 }
 #box4-simple{
 	position: relative;
 	width: 400px;
 	display: inline-block;
 	background-color: #999;
-	margin: 50px;
 }
 .box4-simple-content-text1{
 	text-align: left;
@@ -354,11 +335,8 @@ body{
 	color: #a6b3a9;
 	font-size: 25px;
 }
-#box4-more2{
-	color: #fff;
-}
 #box4-more3{
-	color: #fff;
+	color: #a6b3a9;
 }
 #box4-more4{
 	color: #fff;
@@ -426,6 +404,13 @@ body{
 	margin: 10px;
 	display: inline-block;
 }
+.box4-simple-content-more a{
+text-decoration: none;
+
+}
+.box4-simple-content-more a:hover{
+	text-decoration: underline;
+}
 #box4-simple-content2{
 	display: none;
 }
@@ -435,58 +420,30 @@ body{
 .table{
 	text-align: center;
 }
-#box6{
-	padding-bottom: 100px;
-	padding-top: 100px;
+#table1{
+	height: 50px;
+	text-align: center;
 }
-#box6 table{
-	margin: auto;
-}
-#box6 table th{
+.box4-more{
 	position: relative;
-	background-color: #333;
-	height: 250px;
-	width: 250px;
-	overflow: hidden;
-	box-shadow: 0 0 10px #222;
-	opacity: 0.5;
-	transform: skew(0deg);
-	transition-duration: 400ms;
-	transition-property: transform, box-shadow, opacity;
+	display: inline-block;
+	color: #a6b3a9;
+	text-align: left;
+	vertical-align: top;
+	width: 800px;
+	font-size: 25px;
 }
-#box6 table img{
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	transition-duration: 1s;
-	transition-property: transform;
-	height: 100%;
+#box4-more2 table{
+
+	position: relative;
+	display: inline-block;
+	color: #a6b3a9;
+	text-align: left;
+	vertical-align: top;
+	width: 800px;
+	font-size: 25px;
 }
-#box6 table th:hover img{
-	transform: scale(1);
-}
-#box6 table th:hover{
-	transform: skew(0) scale(1.05);
-	box-shadow: 0 0 30px 10px #fff;
-	z-index: 1;
-	opacity: 0.4;
-}
-@media(max-width: 800px){
-	#box4-more{
-		padding-left: 5%;
-		padding-right: 5%;
-		width: 90%;
-	}
-	#box1-title{
-		width: 90%;
-	}
-}
-.ad-box-close{
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	color: #000;
-	font-size: 50px;
-	z-index: 1;
+#box4-more2{
+	color:  #a6b3a9;
+	padding-top: 30px;
 }

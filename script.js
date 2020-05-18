@@ -1,7 +1,4 @@
 $("document").ready(function(){
-	$(".ad-box-close").click(function(){
-		document.getElementById("ad-box").style.display = "none";
-	})
 	$(".box4-simple-btn").click(function(){
 		let x = this.id;
 		if (x == "box4-simple-btn1") {
@@ -62,4 +59,3 @@ $("document").ready(function(){
 		}
 	})
 })
-alert("Мы не несём ответственность за ваши данные. Этот сайт использует файлы COOKIE");
