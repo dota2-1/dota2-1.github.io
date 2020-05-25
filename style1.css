@@ -1,12 +1,13 @@
 body{
 	margin: 0;
 	height: 2000px;
+	background-color: rgba(0,0,0,0.9);
 }
 
 #box1{
 	top: 150px;
 	background-color: #333;
-	height: 1100px;
+	height: 1450px;
 	width: 80%;
 	border-radius: 5px; 
 	left: 10%;
@@ -21,6 +22,49 @@ body{
 	height: 50px;
 	top: 20px;
 }
+#top-menu-right{
+	top: -38px;
+	color: #aaa;
+	position: relative;
+	left: 90%;
+	width: 90px;
+	height: 25px;
+	text-align: center;
+	cursor: pointer;
+}
+#top-menu-right:hover{
+	background-color: #222;
+	color: #fff;
+}
+#top-menu-right:hover .sub-top-menu-right{
+	display: block;
+}
+.sub-top-menu-right{
+	height: 40px;
+	width: 80px;
+	position: relative;
+	top: 6.7px;
+	display: none;
+	background-color: #222;
+	cursor: pointer;
+/*	border: 2px solid #222;*/
+}
+.sub-top-menu-right a{
+	text-decoration: none;
+	color: #aaa;
+}
+.sub-top-menu-right a:hover{
+		color: #fff;
+}
+.sub-tmr-title{
+	left: 5px;
+	position: relative;
+}
+
+/*#top-menu-right img{
+	position: relative;
+
+}*/
 #top-menu-logo{	
 	overflow: hidden;
 
@@ -33,25 +77,36 @@ body{
 	text-align: center;
 	overflow: hidden;
 	margin: 10px;
-	height: 30px;
+	height: 20px;
+	padding: 5px;
 	padding-right: 25px;
 	font-size: 16px;
 
 }
+
 .top-menu-button:hover{
 	background-color: #333;
 	color: #fff
 }
 .horizontal-ad{
-	
+	top: 40px;
+	position: relative;
+	left: 15%;
+}
+.horizontal-ad img{
+	width: 80%;
+	height: 80%;
+    left: -5%;
+    position: relative;
+    top: 25px;
 }
 #news-box1{
 	position: relative;
 	width: 70%;
-	height: 800px;
+	height: 900px;
 	z-index: 1;
 	background-color: #222;
-	top: 225px;
+	top: 125px;
 	left: 25px;
 	border-radius: 5px;
 }
@@ -69,13 +124,13 @@ body{
 #news-window1{
 	width: 325px;
 	height: 225px;
-	top: 37px;
+	top: 70px;
 	z-index: 2;
 	left: 25px;
-	position: relative;
+	position: absolute;
 	background-color: #fff;
 }
-#news-window1:hover #news-window1-title{
+.news-window:hover .news-window-title{
 	transform: translateY(-10px);
 }
 .news-window-gradient{
@@ -89,7 +144,7 @@ body{
 	width: 100%;
 	height: 100%;
 }
-#news-window1-title{	
+.news-window-title{	
 	bottom: 0;
 	color: #fff;
 	position: absolute;
@@ -99,7 +154,7 @@ body{
 	transition-duration: 200ms;
 	transition-property: transform;
 }
-#news-window1-info{
+.news-window-info{
 	bottom: 0;
 	color: #aaa;
 	position: absolute;
@@ -117,15 +172,261 @@ body{
 	text-decoration: none;
 	color: #aaa;
 }
-#news-a a:hover{
+#news-a:hover{
 	color: #fff;
+	cursor: default;
 
 } #news-window2{ 
 	width: 325px; 
 	height: 225px; 
-	top: -188.5px; 
+	top: 70px; 
 	z-index: 2; 
-	position: relative; 
+	position: absolute; 
 	background-color: #fff; 
-	right: -53%;
+	right: 25px;
+}
+
+#news-window3{
+	width: 325px;
+	height: 225px;
+	position: absolute;
+	top: 340px;
+	z-index: 2;
+	background-color: #222;
+	left: 25px;
+}
+#news-window4{
+	width: 325px;
+	height: 225px;
+	top: 340px;
+	z-index: 2;
+	background-color: #222;
+	position: absolute;
+	right: 25px;
+}
+#news-window5{
+	width: 325px;
+	height: 225px;
+	top: 605px; /*К каждому новому боксу +270 пикселей*/
+	z-index: 2;
+	background-color: #222;
+	position: absolute;
+	right: 25px;
+}
+#news-window6{
+	width: 325px;
+	height: 225px;
+	top: 605px;
+	z-index: 2;
+	background-color: #222;
+	position: absolute;
+	left: 25px;
+}
+#vertical-ad-box1{
+	width: 250px;
+	height: 386px;
+	position: relative;
+	background-color: #222;
+	left: 74.3%;
+	bottom: 775px;
+	border-radius: 5px;
+}
+#vertical-ad img{
+	width: 80%;
+	height: 80%;
+    left: 25px;
+    position: relative;
+    top: 25px;
+}
+#video-box1{
+	height: 200px;
+	width: 95%;
+	bottom: 35px;
+	left: 25px;
+	border-radius: 5px;
+	position: absolute;
+	background-color: #222;
+}
+#video-top-menu{
+	width: 100%;
+	height: 30px;
+	position: relative;
+	background-color: #444;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	text-align: center;
+	font-size: 20px;
+	color: #aaa;
+	cursor: default;
+}
+#video-box1 a{
+	text-decoration: none;
+
+}
+#video-top-menu:hover{
+	color: #fff;
+}
+#video1{
+	width: 200px;
+	height: 125px;
+	background-color: #333;
+	left: 40px;
+	top: 50px;
+	position: absolute;
+
+}
+#video1 video{
+	width: 100%;
+	height: 100%;
+}
+#video2{
+	width: 200px;
+	height: 125px;
+	background-color: #333;
+	left: 290px;
+	top: 50px;
+	position: absolute;
+}
+#video2 video{
+	width: 100%;
+	height: 100%;
+}
+#video3{
+	width: 200px;
+	height: 125px;
+	background-color: #333;
+	right: 290px;
+	top: 50px;
+	position: absolute;
+}
+#video3 video{
+	width: 100%;
+	height: 100%;
+}
+#video4{
+	width: 200px;
+	height: 125px;
+	background-color: #333;
+	right: 40px;
+	top: 50px;
+	position: absolute;
+}
+#video4 video{
+	width: 100%;
+	height: 100%;
+}
+#articles-box1{
+	width: 250px;
+	background-color: #222;
+	border-radius: 5px;
+	height: 33.7%;
+	left: 74.3%;
+	bottom: 750px;
+	position: relative;
+}
+#articles-box1 a{
+	text-decoration: none;
+}
+#articles-top-menu{
+	width: 100%;
+	background-color: #444;
+	height: 30px;
+	text-align: center;
+	font-size: 20px;
+	cursor: default;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	color: #aaa;
+	font-size: 20px;
+}
+#articles-top-menu:hover{
+	color: #fff;
+}
+#footer-box1{
+	position: relative;
+	top: 21%;
+	width: 100%;
+	height: 7%;
+	background-color: #222;
+}
+#age-category{
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	top: 25px;
+	left: 105px;
+	position: relative;	
+	background-color: #444;
+	border: 1.1px solid #111;
+	cursor: default;
+}
+#age-category a{
+	text-decoration: none;
+	color: #000;
+}
+#age-category-text{
+	top: 6px;
+	right: 15px;
+	width: 55px;
+	position: relative;
+}
+#privacy-policy{
+	left: 600px;
+	position: relative;
+	font-size: 20px;
+	width: 120px;
+}
+#privacy-policy a{
+	text-decoration: none;
+	color: #aaa;
+}
+#privacy-policy a:hover{
+	color: #fff;
+}
+#sait-protection{
+	bottom: -35px;
+	left: 900px;
+	width: 340px;
+	position: relative;
+}
+#sait-protection a{
+	color: #aaa;
+	text-decoration: none;
+}
+#sait-protection a:hover{
+	color: #fff;
+}
+#content1-first{
+
+}
+.content-first{
+	 width: 100%;
+ 	height: 40px;
+ 	cursor: default;
+ 	background-color: #222;
+}
+.content-first:hover{
+	background-color: #555;
+}
+.content-text{
+	color: #aaa;
+	position: relative;
+	font-size: 14px;
+	top: 5px;
+	height: 35px;
+	width: 100%;
+	left: 5%;
+}
+.content-text:hover{
+	color: #fff;
+}
+.content-second{
+	 width: 100%;
+ 	height: 40px;
+ 	top: 40px;
+ 	background-color: #333;
+ 	cursor: default;
+}
+.content-second:hover{
+	background-color: #555;	
 }
